@@ -1,4 +1,5 @@
 // Objectif : démontrer la frontière de décision sans appel réseau.
+import assert from "node:assert/strict";
 import { proposeNext } from "../src/index.mjs";
 import { createFakeProvider } from "../src/jev.mjs";
 const schema = [
@@ -21,6 +22,11 @@ const p = createFakeProvider(() => ({
   },
   usage: { input_tokens: 70, output_tokens: 0 },
 }));
-console.log(
-  await proposeNext("J’ai 29 ans et je loue seul.", schema, { age: 29 }, p),
+const resultat = await proposeNext(
+  "J’ai 29 ans et je loue seul.",
+  schema,
+  { age: 29 },
+  p,
 );
+assert.equal(resultat.nextVariable, "monthly_rent");
+console.log(JSON.stringify(resultat, null, 2));

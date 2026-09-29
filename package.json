@@ -1,6 +1,6 @@
 {
   "name": "@gbesse/jev-openfisca-intake",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Transforme une situation exprimée en français en entrées confirmables pour une simulation OpenFisca.",
   "type": "module",
   "license": "MIT",
