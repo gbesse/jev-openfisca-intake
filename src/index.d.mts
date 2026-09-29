@@ -1,4 +1,4 @@
-// Purpose: Describe explicit intake variables and confirmed OpenFisca inputs.
+// Objectif : décrire les types de l’API métier publique.
 import type { JevProvider } from "./jev.mjs";
 export type IntakeVariable = {
   name: string;

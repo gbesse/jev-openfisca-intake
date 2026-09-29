@@ -1,4 +1,4 @@
-// Purpose: Propose and confirm structured OpenFisca inputs from a user narrative.
+// Objectif : implémenter la frontière de décision métier propre au dépôt.
 export function validateSchema(schema) {
   if (!Array.isArray(schema) || !schema.length)
     throw new TypeError("schema must contain variables");
