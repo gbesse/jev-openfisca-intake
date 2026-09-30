@@ -2,7 +2,7 @@
 
 **Transforme une situation exprimée en français en entrées confirmables pour une simulation OpenFisca.**
 
-[![Tests](https://github.com/gbesse/jev-openfisca-intake/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-openfisca-intake/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.2 · Documentation française
+[![Tests](https://github.com/gbesse/jev-openfisca-intake/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-openfisca-intake/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.3 · Documentation française
 
 Le dépôt propose des correspondances entre un récit utilisateur et un schéma explicite de variables, puis sélectionne la prochaine question utile. Toute valeur inférée reste non confirmée tant que l’application ou l’utilisateur ne l’accepte pas.
 
@@ -61,10 +61,20 @@ console.log(JSON.stringify(resultat, null, 2));
 Lancez-le avec :
 
 ```sh
-npm run demo
+npm run demo:principal
 ```
 
 Résultat à repérer : `nextVariable: monthly_rent`.
+
+### Cas limite à tester
+
+Un dossier déjà complet se termine sans demander une décision au modèle. Le code se trouve dans [`examples/cas-limite.mjs`](examples/cas-limite.mjs).
+
+```sh
+npm run demo:limite
+```
+
+Résultat à repérer : `complete: true · appels Jev: 0`. La commande `npm run demo` exécute les deux exemples.
 
 ## Utilisation de la bibliothèque
 
