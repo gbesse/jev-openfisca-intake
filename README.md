@@ -2,7 +2,7 @@
 
 **Transforme une situation exprimée en français en entrées confirmables pour une simulation OpenFisca.**
 
-[![Tests](https://github.com/gbesse/jev-openfisca-intake/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-openfisca-intake/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.3 · Documentation française
+[![Tests](https://github.com/gbesse/jev-openfisca-intake/actions/workflows/test.yml/badge.svg)](https://github.com/gbesse/jev-openfisca-intake/actions/workflows/test.yml) [MIT](LICENSE) · Node.js 22+ · v0.1.4 · Documentation française
 
 Le dépôt propose des correspondances entre un récit utilisateur et un schéma explicite de variables, puis sélectionne la prochaine question utile. Toute valeur inférée reste non confirmée tant que l’application ou l’utilisateur ne l’accepte pas.
 
@@ -104,6 +104,12 @@ TYPESAFE_API_KEY=... node scripts/live-smoke.mjs
 ```
 
 N’envoyez jamais de secret, de donnée personnelle ni de dossier sensible non expurgé. Évaluez le comportement sur un jeu représentatif de cas français avant tout usage opérationnel.
+
+## Parcours comparatif
+
+`npm run demo:parcours` produit un rapport JSON partageable pour **jev-openfisca-intake** : le scénario principal et la frontière déterministe. Chaque scénario garde sa sortie propre et échoue si son assertion ne passe plus. Les données et probabilités sont synthétiques ; aucun appel Jev n’est effectué.
+
+Cette vue permet de comparer rapidement les chemins de décision et de choisir quel exemple adapter à vos propres données sourcées.
 
 ## Validation
 
